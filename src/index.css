@@ -1,3 +1,34 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html,
+body,
+* {
+  @apply m-0 p-0 text-default;
+}
+
+body {
+  @apply bg-gray-900;
+}
+
+.slide-effect {
+  overflow: hidden;
+}
+
+.slideUp {
+  position: relative;
+  opacity: 0;
+  top: 40px;
+  animation: slideUp ease 0.5s forwards 0.5s;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-40px);
+    opacity: 1;
+  }
+}
